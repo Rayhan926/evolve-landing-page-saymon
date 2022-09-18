@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Mambaday from "../views/Mambaday";
+import MambadayMobile from "../views/MambadayMobile";
 
 const MambadayPage = () => {
   return (
@@ -13,6 +14,7 @@ const MambadayPage = () => {
         ></meta>
       </Head>
       <Mambaday />
+      <MambadayMobile />
     </>
   );
 };

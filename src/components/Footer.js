@@ -17,7 +17,7 @@ const Footer = () => {
         }`}
       >
         {/* <Marquee gradient={false} speed={200}> */}
-        <div className="flex items-center font-northstar-italic text-[64px] leading-[59px] home_page_footer">
+        <div className="flex items-center font-northstar-italic text-[64px] leading-[59px] home_page_footer absolute top-1/2 -translate-y-1/2">
           <span>EvolviNg... /</span>
           &nbsp;
           <span>EvolviNg... /</span>
