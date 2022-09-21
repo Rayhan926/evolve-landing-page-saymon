@@ -12,7 +12,7 @@ const AccordionSection = () => {
 
   return (
     <div className="grid flex-[0.4] z-[3] bg-dark -translate-y-px">
-      <div className="self-center flex flex-col justify-self-center w-full">
+      <div className="self-center flex flex-col justify-self-center w-full pb-[100px]">
         {accordions.map((accordion, i) => (
           <Accordion
             {...accordion}

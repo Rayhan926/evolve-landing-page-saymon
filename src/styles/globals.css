@@ -28,6 +28,7 @@ body {
   background-color: #252422;
   display: flex;
   flex-direction: row;
+  /* height: minmax(103vh, 1350px); */
   height: 103vh;
 }
 

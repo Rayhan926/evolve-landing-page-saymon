@@ -5,12 +5,12 @@ const activeSliderAtom = atom(0);
 
 const images = [
   {
-    src: "/images/mamba-day-shoes-updated-min.png",
-    alt: "mamba-day-shoes-updated-min",
-  },
-  {
     src: "/images/half-folded-01-1000-min.png",
     alt: "half-folded-01-1000-min",
+  },
+  {
+    src: "/images/mamba-day-shoes-updated-min.png",
+    alt: "mamba-day-shoes-updated-min",
   },
 ];
 
