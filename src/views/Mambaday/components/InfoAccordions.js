@@ -44,7 +44,7 @@ export const accordions = [
           <li>20 - YEARS PLAYED</li>
           <li>5 - WORLD CHAMPIONSHIPS</li>
           <li>81 - POINTS SCORED IN A GAME</li>
-          <li>18/4 - ALL STAR &amp; ALL STAR MVP'S</li>
+          <li>18/4 - ALL STAR &amp; ALL STAR MVP&apos;S</li>
           <li>11.01.96 - FIRST GAME</li>
           <li>04.13.16 - LAST GAME</li>
           <li>05.15.21 - HALL OF FAME INDUCTION DATE</li>

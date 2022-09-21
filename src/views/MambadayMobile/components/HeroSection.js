@@ -34,11 +34,11 @@ const HeroSection = () => {
         {/* Page Desc --Start-- */}
         <div className="mobile_page_desc">
           <p className="text-sm text-off-white font-poppins">
-            Released at tipoff of Kobe Bryant’s last game, the Mamba Day Kobe XI
-            celebrated Kobe’s career by wrapping the upper in his memorable
-            numbers. Our adaptation commemorates both sneaker history and Kobe's
-            legacy by including additional numbers within the silhouette of our
-            shorts.
+            Released at tipoff of Kobe Bryant&apos;s last game, the Mamba Day
+            Kobe XI celebrated Kobe&apos;s career by wrapping the upper in his
+            memorable numbers. Our adaptation commemorates both sneaker history
+            and Kobe&apos;s legacy by including additional numbers within the
+            silhouette of our shorts.
           </p>
         </div>
         {/* Page Desc --End-- */}
