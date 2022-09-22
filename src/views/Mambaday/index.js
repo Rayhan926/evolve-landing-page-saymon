@@ -7,7 +7,6 @@ import SoldOutSlider from "./components/SoldOutSlider";
 const Mambaday = () => {
   return (
     <div className="text-white hidden lg:block">
-      <Header />
       <HeroSection />
       <InfoSection />
       <SoldOutSlider />

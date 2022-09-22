@@ -13,7 +13,7 @@ const SliderSection = () => {
       <div className="w-full h-full flex flex-col items-end justify-end gap-5 pr-5 pb-11 animate-from-right">
         <div>{activeSlide.icon}</div>
 
-        <div className="font-northstar-regular font-bold text-right text-2xl leading-[40px]">
+        <div className="font-northstar-regular font-bold text-right text-2xl leading-[35px]">
           {activeSlide.description}
         </div>
       </div>
@@ -21,9 +21,9 @@ const SliderSection = () => {
   }, [activeSlide]);
 
   return (
-    <section className="h-[170vh] bg-gold flex flex-col max-w-[100vw] overflow-x-hidden">
+    <section className="h-[170vh] bg-gold flex flex-col max-w-[100vw] overflow-x-hidden -translate-y-px">
       {/* Slider Container --Start-- */}
-      <div className="grid flex-[0.35] max-h-full">
+      <div className="grid flex-[0.35] max-h-full translate-y-6">
         <div className="w-full h-full relative">
           <div className="grid w-full h-full">
             <div className="self-center grid justify-self-center">
@@ -45,7 +45,7 @@ const SliderSection = () => {
       <div className="flex-[0.25] relative">
         {/* Navigation --Start-- */}
         <div className="bg-gold grid h-full absolute w-full z-[1]">
-          <div className="self-start flex w-[40%] h-full justify-self-start pl-[5%] z-[999]">
+          <div className="self-start flex w-[40%] h-full justify-self-start pl-[5%] z-[999] translate-y-8">
             <span
               onClick={prev}
               className="self-start text-off-white flex-[1] font-northstar-regular justify-self-center text-[4rem] inline"

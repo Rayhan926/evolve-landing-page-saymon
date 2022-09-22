@@ -14,7 +14,8 @@ const Home = () => {
           content="Unwavering confidence derived through self-love emulated through conviction and a never-ending hunger for self-growth"
         ></meta>
       </Head>
-      <section className="w-full h-screen bg-dark relative pt-[160px]">
+      <section className="w-full h-screen bg-dark relative overflow-hidden translate-y-[17%]">
+        {/* translate-y-[20%] */}
         {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Image
             src={"/images/logo.svg"}

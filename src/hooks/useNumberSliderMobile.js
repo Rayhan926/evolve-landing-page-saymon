@@ -318,7 +318,7 @@ const slides = [
   {
     icon: (
       <svg
-        className="w-[112px] mx-auto"
+        className="w-[100px] mx-auto"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 820.75 657.3"
