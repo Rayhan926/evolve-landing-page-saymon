@@ -101,26 +101,34 @@ const LinkDesktop = () => {
 const LinkMobile = () => {
   const arrowRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   useClickAway(arrowRef, () => {
     setIsOpen(false);
   });
   return (
-    <div className="flex lg:hidden items-center fixed bottom-0 left-0 text-[20px] font-northstar-regular font-bold text-white bg-dark">
-      <Link href={"/mambaday"}>
-        <a onClick={() => setIsOpen(false)}>
-          <div
-            className={cx(
-              "duration-200 overflow-hidden whitespace-nowrap",
-              isOpen ? "w-[calc(100vw-80px)]" : "w-0",
-            )}
-          >
-            <p className="pl-5 h-[80px] flex items-center">EVOLVE-SHORTS</p>
-          </div>
-        </a>
-      </Link>
+    <div
+      ref={arrowRef}
+      className="flex lg:hidden items-center fixed bottom-0 left-0 text-[20px] font-northstar-regular font-bold text-white bg-dark"
+    >
       <div
-        ref={arrowRef}
+        onClick={() => {
+          setIsOpen(false);
+          setTimeout(() => {
+            router.push("/mambaday");
+          }, 200);
+        }}
+      >
+        <div
+          className={cx(
+            "duration-200 overflow-hidden whitespace-nowrap",
+            isOpen ? "w-[calc(100vw-80px)]" : "w-0",
+          )}
+        >
+          <p className="pl-5 h-[80px] flex items-center">EVOLVE-SHORTS</p>
+        </div>
+      </div>
+      <div
         onClick={() => setIsOpen((prev) => !prev)}
         className={cx(
           "h-[80px] aspect-square flex items-center justify-center text-[30px] duration-200 delay-100",
