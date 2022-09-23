@@ -1,15 +1,22 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useRef, useState } from "react";
 import Div100vh from "react-div-100vh";
+import { useClickAway } from "react-use";
+import { cx } from "../utils";
 
 const Menu = ({ onClose, isOpen }) => {
   const router = useRouter();
   return (
-    <Div100vh>
+    <Div100vh
+      className={`fixed top-0 left-0 w-full ${
+        isOpen ? "" : "pointer-events-none"
+      }`}
+    >
       <div
         className={`fixed bottom-0 left-0 w-full z-50 bg-white overflow-hidden duration-300 ${
-          isOpen ? "h-[100%]" : "h-[0px] pointer-events-none"
+          isOpen ? "h-[100%]" : "h-[0px]"
         }`}
       >
         <div className="pt-[60px] px-[38px] md:pt-[90px] md:px-[61px] xl:px-20 xl:pt-[100px] h-screen fixed top-0 left-0 w-full">
@@ -40,7 +47,7 @@ const Menu = ({ onClose, isOpen }) => {
               conviction and a never-ending hunger for self growth.
             </p>
 
-            <div className="mt-auto md:mt-[70px]">
+            {/* <div className="mt-auto md:mt-[70px]">
               <div
                 onClick={() => {
                   onClose();
@@ -62,7 +69,9 @@ const Menu = ({ onClose, isOpen }) => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
+            <LinkDesktop />
+            <LinkMobile />
           </div>
         </div>
       </div>
@@ -71,3 +80,55 @@ const Menu = ({ onClose, isOpen }) => {
 };
 
 export default Menu;
+
+const LinkDesktop = () => {
+  return (
+    <Link href={"/mambaday"}>
+      <a className="hidden lg:inline-block">
+        <div className="flex items-center absolute bottom-0 left-0 text-[24px] font-northstar-regular font-bold text-white group bg-dark">
+          <div className="w-0 group-hover:w-[333px] duration-200 overflow-hidden whitespace-nowrap">
+            <p className="pl-7 ">EVOLVE-SHORTS</p>
+          </div>
+          <div className="h-[94px] aspect-square flex items-center justify-center text-[35px] group-hover:rotate-180 duration-200 delay-100">
+            {">"}
+          </div>
+        </div>
+      </a>
+    </Link>
+  );
+};
+
+const LinkMobile = () => {
+  const arrowRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  useClickAway(arrowRef, () => {
+    setIsOpen(false);
+  });
+  return (
+    <div className="lg:hidden flex items-center absolute bottom-0 left-0 text-[20px] font-northstar-regular font-bold text-white bg-dark">
+      <Link href={"/mambaday"}>
+        <a onClick={() => setIsOpen(false)}>
+          <div
+            className={cx(
+              "duration-200 overflow-hidden whitespace-nowrap",
+              isOpen ? "w-[calc(100vw-80px)]" : "w-0",
+            )}
+          >
+            <p className="pl-5 h-[80px] flex items-center">EVOLVE-SHORTS</p>
+          </div>
+        </a>
+      </Link>
+      <div
+        ref={arrowRef}
+        onClick={() => setIsOpen((prev) => !prev)}
+        className={cx(
+          "h-[80px] aspect-square flex items-center justify-center text-[30px] duration-200 delay-100",
+          isOpen && "rotate-180",
+        )}
+      >
+        {">"}
+      </div>
+    </div>
+  );
+};
