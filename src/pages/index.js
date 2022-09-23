@@ -14,14 +14,14 @@ const Home = () => {
           content="Unwavering confidence derived through self-love emulated through conviction and a never-ending hunger for self-growth"
         ></meta>
       </Head>
-      <Div100vh>
+      <Div100vh className="relative">
         <section className="w-full h-full bg-dark relative overflow-hidden">
-          <div className="w-full h-full translate-y-[17%]">
+          <div className="w-full h-full translate-y-[12%] sm:translate-y-[17%]">
             <Logo />
           </div>
         </section>
+        <Footer />
       </Div100vh>
-      <Footer />
     </>
   );
 };

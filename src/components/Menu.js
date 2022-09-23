@@ -10,12 +10,12 @@ const Menu = ({ onClose, isOpen }) => {
   const router = useRouter();
   return (
     <Div100vh
-      className={`fixed top-0 left-0 w-full ${
+      className={`absolute top-0 left-0 w-full ${
         isOpen ? "" : "pointer-events-none"
       }`}
     >
       <div
-        className={`fixed bottom-0 left-0 w-full z-50 bg-white overflow-hidden duration-300 ${
+        className={`absolute bottom-0 left-0 w-full z-50 bg-white overflow-hidden duration-300 ${
           isOpen ? "h-[100%]" : "h-[0px]"
         }`}
       >
@@ -106,7 +106,7 @@ const LinkMobile = () => {
     setIsOpen(false);
   });
   return (
-    <div className="lg:hidden flex items-center absolute bottom-0 left-0 text-[20px] font-northstar-regular font-bold text-white bg-dark">
+    <div className="flex lg:hidden items-center fixed bottom-0 left-0 text-[20px] font-northstar-regular font-bold text-white bg-dark">
       <Link href={"/mambaday"}>
         <a onClick={() => setIsOpen(false)}>
           <div
