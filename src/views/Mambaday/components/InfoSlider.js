@@ -1,14 +1,21 @@
 import Image from "next/image";
 import React from "react";
-import { useState } from "react";
+import { cx } from "../../../utils";
 import useSlider from "../../../hooks/useSlider";
 
 const InfoSlider = () => {
-  const { activeImage, next, prev } = useSlider();
+  const { activeImage, next, prev, toggleOffscreenImage } = useSlider();
+
+  const hasOffScreenImage = activeImage?.hasOffScreenImage;
   return (
     <>
       <div className="slider_container">
-        <div className="max-w-[432px]">
+        <div
+          className={cx("max-w-[432px]", hasOffScreenImage && "cursor-pointer")}
+          onClick={() => {
+            hasOffScreenImage && toggleOffscreenImage();
+          }}
+        >
           <Image {...activeImage} alt="Slider" width={800} height={1000} />
         </div>
       </div>

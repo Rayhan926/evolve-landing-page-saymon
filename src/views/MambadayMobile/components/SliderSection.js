@@ -5,8 +5,10 @@ import useSlider from "../../../hooks/useSlider";
 import AccordionSection from "./AccordionSection";
 
 const SliderSection = () => {
-  const { activeImage, next, prev } = useSlider();
+  const { activeImage, next, prev, toggleOffscreenImage } = useSlider();
   const { activeSlide } = useNumberSliderMobile();
+
+  const hasOffScreenImage = activeImage?.hasOffScreenImage;
 
   const Slide = useCallback(() => {
     return (
@@ -27,7 +29,12 @@ const SliderSection = () => {
         <div className="w-full h-full relative">
           <div className="grid w-full h-full">
             <div className="self-center grid justify-self-center">
-              <div className="max-w-[75%] mx-auto">
+              <div
+                className="max-w-[75%] mx-auto"
+                onClick={() => {
+                  hasOffScreenImage && toggleOffscreenImage();
+                }}
+              >
                 <Image
                   {...activeImage}
                   alt="Slider"

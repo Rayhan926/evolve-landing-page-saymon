@@ -20,9 +20,9 @@ body {
   @apply select-none;
 }
 
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .size_table_text {
   @apply text-sm font-northstar-regular font-bold text-off-white;
